@@ -232,3 +232,318 @@ body {
         font-size: 15px;
     }
 }
+/* ========================================
+   PHOTOHOLIC ARCHIVE
+======================================== */
+
+.photo-archive {
+    min-height: 100vh;
+    padding: 120px 20px 160px;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.section-label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #bda6ff;
+
+    margin-bottom: 18px;
+}
+
+.photo-archive h2 {
+    font-size: clamp(35px, 7vw, 65px);
+
+    color: #e0d0ff;
+
+    margin-bottom: 20px;
+}
+
+.archive-intro {
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #bdb3d1;
+
+    margin-bottom: 80px;
+}
+
+
+/* ========================================
+   PHOTO CONSTELLATION
+======================================== */
+
+.photo-constellation {
+    width: min(100%, 1000px);
+    height: 850px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+
+/* ========================================
+   MEMORY CARDS
+======================================== */
+
+.memory {
+    position: absolute;
+
+    width: 180px;
+    height: 230px;
+
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(216, 194, 255, 0.35);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 0 25px rgba(168, 117, 255, 0.15);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation: floatingMemory 5s ease-in-out infinite;
+}
+
+.memory img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    display: block;
+}
+
+
+/* ========================================
+   HOVER EFFECT
+======================================== */
+
+.memory:hover {
+    transform: scale(1.12) !important;
+
+    box-shadow:
+        0 0 35px rgba(168, 117, 255, 0.55);
+
+    z-index: 20;
+}
+
+
+/* ========================================
+   MEMORY POSITIONS
+======================================== */
+
+.memory-1 {
+    top: 30px;
+    left: 38%;
+
+    transform: rotate(-4deg);
+}
+
+.memory-2 {
+    top: 170px;
+    left: 10%;
+
+    transform: rotate(5deg);
+
+    animation-delay: -1s;
+}
+
+.memory-3 {
+    top: 180px;
+    right: 8%;
+
+    transform: rotate(-6deg);
+
+    animation-delay: -2s;
+}
+
+.memory-4 {
+    top: 390px;
+    left: 26%;
+
+    transform: rotate(4deg);
+
+    animation-delay: -3s;
+}
+
+.memory-5 {
+    top: 410px;
+    right: 25%;
+
+    transform: rotate(-5deg);
+
+    animation-delay: -1.5s;
+}
+
+.memory-6 {
+    top: 600px;
+    left: 8%;
+
+    transform: rotate(-5deg);
+
+    animation-delay: -2.5s;
+}
+
+.memory-7 {
+    top: 620px;
+    left: 40%;
+
+    transform: rotate(5deg);
+
+    animation-delay: -4s;
+}
+
+.memory-8 {
+    top: 590px;
+    right: 7%;
+
+    transform: rotate(-4deg);
+
+    animation-delay: -3.5s;
+}
+
+.memory-9 {
+    top: 320px;
+    right: 43%;
+
+    transform: rotate(3deg);
+
+    animation-delay: -4.5s;
+}
+
+
+/* ========================================
+   LITTLE STARS
+======================================== */
+
+.memory-star {
+    position: absolute;
+
+    font-size: 18px;
+
+    color: #d8c2ff;
+
+    text-shadow:
+        0 0 10px rgba(216, 194, 255, 0.9);
+
+    animation: starPulse 2s ease-in-out infinite;
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes floatingMemory {
+
+    0%, 100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -10px;
+    }
+}
+
+@keyframes starPulse {
+
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+/* ========================================
+   MOBILE CONSTELLATION
+======================================== */
+
+@media (max-width: 600px) {
+
+    .photo-archive {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+
+    .archive-intro {
+        margin-bottom: 50px;
+    }
+
+    .photo-constellation {
+        height: 1250px;
+        width: 100%;
+    }
+
+    .memory {
+        width: 145px;
+        height: 190px;
+    }
+
+    .memory-1 {
+        top: 20px;
+        left: calc(50% - 72px);
+    }
+
+    .memory-2 {
+        top: 180px;
+        left: 5%;
+    }
+
+    .memory-3 {
+        top: 190px;
+        right: 5%;
+    }
+
+    .memory-4 {
+        top: 380px;
+        left: 7%;
+    }
+
+    .memory-5 {
+        top: 390px;
+        right: 6%;
+    }
+
+    .memory-6 {
+        top: 590px;
+        left: 5%;
+    }
+
+    .memory-7 {
+        top: 600px;
+        left: calc(50% - 72px);
+    }
+
+    .memory-8 {
+        top: 590px;
+        right: 5%;
+    }
+
+    .memory-9 {
+        top: 820px;
+        left: calc(50% - 72px);
+    }
+}
