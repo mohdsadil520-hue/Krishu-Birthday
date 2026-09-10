@@ -36,6 +36,8 @@ body {
     position: relative;
     overflow: hidden;
 
+   transition: opacity 0.8s ease;
+
     background:
         radial-gradient(circle at 20% 20%, #6d4bb8 0%, transparent 25%),
         radial-gradient(circle at 80% 70%, #9b6cff 0%, transparent 20%),
