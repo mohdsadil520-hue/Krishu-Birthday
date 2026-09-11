@@ -5,27 +5,24 @@
 
 
 // Birthday Universe enter karne ka function
-function enterUniverse() {
+function beginActualStory() {
 
-    const openingScreen = document.querySelector(".opening-screen");
-    const birthdayUniverse = document.getElementById("birthday-universe");
+    const screen = document.getElementById("real-story-screen");
+    const timeline = document.querySelector(".story-section");
 
-    // Opening screen ko smoothly fade out karna
-    openingScreen.style.opacity = "0";
+    screen.style.opacity = "0";
 
-    // Thoda wait karke main universe dikhana
     setTimeout(() => {
 
-        openingScreen.style.display = "none";
-        birthdayUniverse.style.display = "block";
+        screen.style.display = "none";
 
-        // Page ko top par rakhna
-        window.scrollTo({
-            top: 0,
+        timeline.style.display = "block";
+
+        timeline.scrollIntoView({
             behavior: "smooth"
         });
 
-    }, 800);
+    }, 1000);
 }
 // ========================================
 // REAL STORY TRANSITION
