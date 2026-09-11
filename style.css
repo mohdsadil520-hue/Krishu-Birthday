@@ -547,3 +547,258 @@ body {
         left: calc(50% - 72px);
     }
 }
+/* ========================================
+   FRIENDSHIP TIMELINE
+======================================== */
+
+.story-section {
+    min-height: 100vh;
+    padding: 130px 20px 160px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 50%, rgba(110, 76, 180, 0.16), transparent 45%);
+}
+
+.story-section h2 {
+    font-size: clamp(35px, 7vw, 65px);
+    color: #e0d0ff;
+    margin-bottom: 20px;
+}
+
+.story-intro {
+    max-width: 650px;
+    margin: 0 auto 100px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #bdb3d1;
+}
+
+
+/* TIMELINE CONTAINER */
+
+.timeline {
+    position: relative;
+    width: min(100%, 950px);
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+/* GLOWING CENTER LINE */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #a875ff,
+        #d8c2ff,
+        #a875ff,
+        transparent
+    );
+
+    box-shadow: 0 0 15px rgba(168, 117, 255, 0.7);
+}
+
+
+/* TIMELINE ITEM */
+
+.timeline-item {
+    width: 50%;
+    position: relative;
+    padding: 25px 55px;
+    margin-bottom: 45px;
+}
+
+
+/* LEFT / RIGHT ALTERNATION */
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+
+/* GLOWING DOT */
+
+.timeline-dot {
+    position: absolute;
+    top: 42px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #17102f;
+    border: 2px solid #cdb5ff;
+
+    color: #e5d8ff;
+    font-size: 11px;
+
+    box-shadow:
+        0 0 10px rgba(168, 117, 255, 0.8),
+        0 0 25px rgba(168, 117, 255, 0.4);
+
+    z-index: 5;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -11px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -11px;
+}
+
+
+/* STORY CARDS */
+
+.timeline-card {
+    position: relative;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(216, 194, 255, 0.18);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(168, 117, 255, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(216, 194, 255, 0.5);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(168, 117, 255, 0.22);
+}
+
+
+/* NUMBER */
+
+.timeline-number {
+    display: block;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: #a875ff;
+
+    margin-bottom: 10px;
+}
+
+
+/* TITLE */
+
+.timeline-card h3 {
+    font-size: clamp(21px, 3vw, 28px);
+
+    color: #e5d9ff;
+
+    margin-bottom: 14px;
+}
+
+
+/* DESCRIPTION */
+
+.timeline-card p {
+    font-size: 16px !important;
+
+    line-height: 1.7;
+
+    color: #bdb3d1 !important;
+}
+
+
+/* FINAL LINE */
+
+.timeline-ending {
+    margin-top: 22px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(216, 194, 255, 0.15);
+
+    color: #d8c2ff;
+
+    font-size: 15px;
+
+    font-style: italic;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .story-section {
+        padding: 100px 15px 120px;
+    }
+
+    .story-intro {
+        margin-bottom: 70px;
+        font-size: 16px;
+    }
+
+    .timeline::before {
+        left: 18px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd) {
+        width: 100%;
+        left: 0;
+
+        padding:
+            20px
+            15px
+            20px
+            55px;
+
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 7px;
+        right: auto;
+    }
+
+    .timeline-card {
+        padding: 24px;
+    }
+
+}
