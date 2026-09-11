@@ -27,3 +27,37 @@ function enterUniverse() {
 
     }, 800);
 }
+// ========================================
+// REAL STORY TRANSITION
+// ========================================
+
+function openRealStory() {
+
+    const screen = document.getElementById("real-story-screen");
+
+    screen.style.display = "flex";
+
+    setTimeout(() => {
+        screen.style.opacity = "1";
+    }, 50);
+}
+
+
+function beginActualStory() {
+
+    const screen = document.getElementById("real-story-screen");
+
+    screen.style.opacity = "0";
+
+    setTimeout(() => {
+
+        screen.style.display = "none";
+
+        const timeline = document.querySelector(".story-section");
+
+        timeline.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }, 1000);
+}
