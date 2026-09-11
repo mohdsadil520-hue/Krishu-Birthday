@@ -1232,3 +1232,8 @@ body {
     }
 
 }
+/* Actual story stays hidden until Krishu enters it */
+
+.story-section {
+    display: none;
+}
