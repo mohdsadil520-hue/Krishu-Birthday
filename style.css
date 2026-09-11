@@ -802,3 +802,247 @@ body {
     }
 
 }
+/* ========================================
+   TOTALLY ACCURATE HISTORY - TROLL SECTION
+======================================== */
+
+.troll-history {
+    min-height: 100vh;
+    padding: 130px 20px 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(168, 117, 255, 0.10), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(112, 82, 180, 0.10), transparent 30%);
+}
+
+.troll-history h2 {
+    font-size: clamp(34px, 7vw, 62px);
+    color: #e0d0ff;
+    margin-bottom: 20px;
+}
+
+.troll-intro {
+    max-width: 650px;
+    margin: 0 auto 80px;
+    color: #aaa0bd;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* FAKE HISTORY GRID */
+
+.fake-history {
+    width: min(100%, 900px);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* FAKE CARDS */
+
+.fake-card {
+    position: relative;
+    padding: 32px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px dashed rgba(216, 194, 255, 0.22);
+    border-radius: 18px;
+
+    backdrop-filter: blur(8px);
+
+    transform: rotate(-1deg);
+
+    transition: 0.35s ease;
+}
+
+.fake-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.fake-card:hover {
+    transform: translateY(-7px) rotate(0deg);
+
+    border-color: rgba(216, 194, 255, 0.5);
+
+    box-shadow:
+        0 0 30px rgba(168, 117, 255, 0.15);
+}
+
+
+/* NUMBER */
+
+.fake-card > span {
+    display: inline-block;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    color: #a875ff;
+
+    margin-bottom: 15px;
+}
+
+
+/* TITLE */
+
+.fake-card h3 {
+    color: #ddd0f7;
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+
+
+/* TEXT */
+
+.fake-card p {
+    color: #aaa0bd !important;
+    font-size: 15px !important;
+    line-height: 1.7;
+}
+
+.fake-card small {
+    display: block;
+
+    margin-top: 15px;
+
+    color: #756b87;
+
+    font-size: 12px;
+
+    font-style: italic;
+}
+
+
+/* FINAL FAKE CARD */
+
+.final-fake {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto 0;
+
+    border-color: rgba(168, 117, 255, 0.3);
+}
+
+
+/* FAKE ACCURACY BAR */
+
+.accuracy {
+    margin-top: 25px;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    color: #a875ff;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* TRUTH REVEAL */
+
+.truth-reveal {
+    margin: 110px auto 0;
+
+    max-width: 650px;
+
+    animation: truthPulse 3s ease-in-out infinite;
+}
+
+.truth-reveal p {
+    color: #968ca8 !important;
+    font-size: 15px !important;
+}
+
+.truth-reveal h3 {
+    margin: 12px 0;
+
+    color: #e2d5ff;
+
+    font-size: clamp(22px, 4vw, 32px);
+}
+
+.truth-arrow {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #cdb5ff;
+
+    font-size: 28px;
+
+    animation: arrowBounce 1.5s ease-in-out infinite;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes truthPulse {
+    0%, 100% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .troll-history {
+        padding: 100px 15px 100px;
+    }
+
+    .troll-intro {
+        margin-bottom: 60px;
+        font-size: 16px;
+    }
+
+    .fake-history {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fake-card,
+    .fake-card:nth-child(even) {
+        transform: rotate(0deg);
+        padding: 25px;
+    }
+
+    .final-fake {
+        grid-column: auto;
+    }
+
+    .truth-reveal {
+        margin-top: 80px;
+    }
+}
