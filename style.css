@@ -1046,3 +1046,189 @@ body {
         margin-top: 80px;
     }
 }
+/* ========================================
+   REAL STORY TRANSITION SCREEN
+======================================== */
+
+#real-story-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #35245f 0%,
+            #17102f 38%,
+            #080617 80%
+        );
+
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    overflow: hidden;
+}
+
+
+/* STAR FIELD */
+
+.real-story-stars {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(216,194,255,0.7) 1px, transparent 1px);
+
+    background-size: 110px 110px, 170px 170px;
+    background-position: 20px 30px, 80px 100px;
+
+    opacity: 0.3;
+
+    animation: starDrift 12s linear infinite;
+}
+
+
+/* CONTENT */
+
+.real-story-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    animation: realStoryAppear 1.5s ease;
+}
+
+.personal-label {
+    font-size: 12px !important;
+    letter-spacing: 4px;
+
+    color: #bda6ff !important;
+
+    margin-bottom: 25px;
+}
+
+.real-story-content h2 {
+    font-size: clamp(40px, 8vw, 75px);
+
+    line-height: 1.05;
+
+    color: #eee5ff;
+
+    margin-bottom: 35px;
+
+    text-shadow:
+        0 0 25px rgba(168,117,255,0.35);
+}
+
+.personal-message {
+    font-size: 18px !important;
+
+    line-height: 1.8;
+
+    color: #c9bfdc !important;
+
+    margin-bottom: 40px;
+}
+
+
+/* BEGIN BUTTON */
+
+.begin-story-button,
+.real-story-button {
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #b58aff,
+        #7651c9
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(168,117,255,0.35);
+
+    transition: 0.35s ease;
+}
+
+.begin-story-button:hover,
+.real-story-button:hover {
+    transform: translateY(-3px) scale(1.05);
+
+    box-shadow:
+        0 0 35px rgba(168,117,255,0.7);
+}
+
+
+/* ANIMATIONS */
+
+@keyframes realStoryAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+@keyframes starDrift {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-80px);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    #real-story-screen {
+        padding: 20px;
+    }
+
+    .real-story-content h2 {
+        font-size: 42px;
+    }
+
+    .personal-message {
+        font-size: 16px !important;
+    }
+
+    .begin-story-button {
+        padding: 14px 22px;
+        font-size: 14px;
+    }
+
+}
