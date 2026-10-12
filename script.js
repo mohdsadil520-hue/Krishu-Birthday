@@ -71,3 +71,11 @@ function beginActualStory() {
 
     }, 1000);
 }
+
+
+/* PHOTO MEMORY CAPTIONS */
+document.querySelectorAll(".memory").forEach((memory) => {
+    memory.addEventListener("click", () => {
+        memory.classList.toggle("caption-visible");
+    });
+});
