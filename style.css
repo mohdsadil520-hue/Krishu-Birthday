@@ -1309,3 +1309,29 @@ body {
         padding: 24px;
     }
 }
+
+
+/* PHOTO MEMORY CAPTIONS */
+.memory-caption {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(12, 7, 35, 0.92);
+    color: #f2ddff;
+    font-size: 13px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.memory.caption-visible .memory-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
