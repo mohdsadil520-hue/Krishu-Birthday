@@ -1309,6 +1309,7 @@ body {
         padding: 24px;
     }
 }
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
 
 
 /* PHOTO MEMORY CAPTIONS */
@@ -1363,4 +1364,29 @@ body {
     }
 }
 
+/* ✨ CINZEL DECORATIVE — KRISHU'S UNIVERSE ✨ */
 
+/* Welcome, Krishu */
+.opening-content h1,
+#birthday-universe h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* A Little Corner of Our Story */
+.story-section h2,
+.real-story-content h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* The Story So Far */
+.section-label,
+.story-section .section-label {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
