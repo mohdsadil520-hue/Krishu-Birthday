@@ -1336,47 +1336,31 @@ body {
     transform: translateY(0);
 }
 
-
-/* FIX: TIMELINE CARDS GETTING TOO NARROW */
+/* TIMELINE WIDTH FIX */
 .timeline-item {
-    box-sizing: border-box;
     min-width: 0;
 }
 
 .timeline-card {
-    box-sizing: border-box;
+    width: 100%;
     min-width: 0;
     overflow-wrap: break-word;
 }
 
 .timeline-card h3 {
-    overflow-wrap: normal;
     word-break: normal;
-    hyphens: none;
+    overflow-wrap: break-word;
 }
 
-/* Give timeline cards more usable space */
 @media (min-width: 701px) {
     .timeline-item {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
-
-@media (max-width: 700px) {
-    .timeline-item {
-        width: 100%;
-        left: 0 !important;
-        padding: 20px 15px 20px 40px;
-        text-align: left !important;
-    }
-
-    .timeline-item .timeline-dot {
-        left: 0;
-        right: auto;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .timeline-card {
-        width: 100%;
+        padding: 24px;
     }
 }
+
+
