@@ -1390,3 +1390,37 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
 }
+
+
+/* 💌 LETTER PAGE INVITATION */
+
+.letter-invitation {
+    text-align: center;
+    margin: 50px auto 20px;
+    padding: 30px 20px;
+}
+
+.letter-invitation-text {
+    color: #d8c4ff;
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+}
+
+.letter-page-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #c49aff;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #6d3bbd, #292052);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 20px rgba(175, 120, 255, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.letter-page-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px rgba(175, 120, 255, 0.5);
+}
